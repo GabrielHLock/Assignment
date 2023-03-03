@@ -1,6 +1,6 @@
 let str = 'this is a very long string with some vowels perhaps';
 
-function vowelcount(str){
+function vowelcount(){
 	let count=0;
 	const vowel = ['a','e','i','o','u']
 	for (let char of str){
@@ -11,4 +11,4 @@ function vowelcount(str){
 	return count
 }
 
-console.log(vowelcount(str));
+console.log(vowelcount());
