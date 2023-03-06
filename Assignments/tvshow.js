@@ -50,7 +50,19 @@ watched: false,
 },
 ];
 
-for(i=0;tvShows.length;i++){
-	console.log(tvShows[i].title);
-}
+const showTitles = tvShows.map((show) => show.title);
 
+const tvShowsReduced = tvShows.map((show) => ({
+	title: show.title,
+	rating: show.rating,
+}))
+
+const showTitlesRated = tvShows.map((show) =>
+	show.rating >= 9 ? show.title.toUpperCase() : show.title.toLowerCase()
+);
+
+console.table(showTitles);
+console.table(tvShowsReduced);
+console.table(showTitlesRated);
+
+// export { showTitles, tvShowsReduced, showTitlesRated };
